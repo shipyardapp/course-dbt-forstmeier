@@ -2,20 +2,17 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
-
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
+  - name: users
+    description: data on users
+  - name: addresses
+    description: data on user addresses
+  - name: events
+    description: data on application events
+  - name: order_items
+    description: data on order quantities
+  - name: orders
+    description: data on orders
+  - name: products
+    description: data on products
+  - name: promos
+    description: data on product promos

@@ -69,10 +69,10 @@ sources:
         columns:
           - name: product_id
           - name: name
-          - name: price
+          - name: pricef
           - name: quantity
       - name: promos
         columns:
           - name: promo_id
-          - name: discount
+          - name: discout
           - name: status
