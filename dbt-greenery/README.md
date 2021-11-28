@@ -78,3 +78,9 @@ with unique_events as (
 select avg(count)
 from unique_events;
 ```
+
+# Week 2
+
+- I didn't have time to build out models or updated queries to re-address the questions from the prior week.
+- A bespoke test has been included and then a handfule of basic `not_null` and `unique` tests on various columns; I tend to prefer to try and make my queries more "defensive" basically assuming that bad data may reach the queries but (not best practice but a general preference coming from a development background).
+- For the actual models, I think I opted to put too much weight into the `core` resources - I was sort of lost with the open-ended nature of the questions and basically just tried providing _enriched_ resources in the `core` that could be referenced from the other model packages with pretty basic `SELECT` statements. Again, not really following the exact requirements of the week's submission.
