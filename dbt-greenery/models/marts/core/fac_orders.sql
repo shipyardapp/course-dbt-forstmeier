@@ -26,6 +26,7 @@ with order_data as (
             when delivered_at is null then 'no delivery'
             when estimated_delivery_at > delivered_at then 'on time delivery'
             when estimated_delivery_at < delivered_at then 'late delivery'
+            else 'no delivery'
         end as delivery_status
     from {{ ref('stg_orders') }}
 ),

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fac_orders
+    description: an enriched fact table for orders
+    columns:
+      - name: delivery_status
+        description: a human-readable indicator of whether the delivery was timely executed
+        tests:
+          - not_null
+      - name: order_id
+        tests:
+          - unique
+  - name: dim_users
+    description: an enriched dimension table for users
+    columns:
+      - name: email
+        tests:
+          - unique
+      - name: number_of_orders
+        description: the total number of orders a user has placed
+        tests:
+          - not_null
