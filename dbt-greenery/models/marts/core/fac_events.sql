@@ -16,4 +16,4 @@ with fac_events as (
     from {{ ref('stg_events') }}
 )
 
-select * from fac_events;
+select * from fac_events

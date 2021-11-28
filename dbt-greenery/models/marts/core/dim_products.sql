@@ -1,6 +1,6 @@
 {{
     config(
-        materialized 'table',
+        materialized='table',
         unique_key='product_id'
     )
 }}
@@ -13,4 +13,4 @@ with dim_products as (
     from {{ ref('stg_products') }}
 )
 
-select * from dim_products;
+select * from dim_products

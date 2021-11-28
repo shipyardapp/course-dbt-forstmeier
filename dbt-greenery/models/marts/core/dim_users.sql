@@ -10,7 +10,7 @@ with user_data as (
     from {{ ref('stg_users') }}
 ),
 
-with order_data as (
+order_data as (
     select count(*) as number_of_orders, user_id
     from {{ ref('stg_orders') }}
     group by user_id
@@ -29,7 +29,7 @@ dim_users as (
         od.number_of_orders
     from user_data as ud
     join order_data as od
-    on ud.order_id = od.order_id
+    on ud.user_id = od.user_id
 )
 
-select * from dim_users;
+select * from dim_users
