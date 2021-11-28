@@ -2,17 +2,51 @@
 version: 2
 
 models:
-  - name: users
+  - name: stg_users
     description: data on users
-  - name: addresses
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_addresses
     description: data on user addresses
-  - name: events
+    columns:
+      - name: address_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_events
     description: data on application events
-  - name: order_items
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_order_items
     description: data on order quantities
-  - name: orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+  - name: stg_orders
     description: data on orders
-  - name: products
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_products
     description: data on products
-  - name: promos
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_promos
     description: data on product promos
+    columns:
+      - name: promo_id
+        tests:
+          - not_null
+          - unique
