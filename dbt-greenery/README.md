@@ -90,3 +90,4 @@ from unique_events;
 - I opted to skip the product-specific conversion rate for this week because I won't be able to dig into the specific SQL statements or model reworks that are needed to make that happen.
 - The external testing package `dbt_expectations` has been included on a staging model as an example.
 - The DAG has likely gotten more complex but because I won't really be able to go back and rework models from prior weeks, it can't really be helped at this point.
+- See `week_3_dag.png` for the updated graph.
