@@ -84,3 +84,9 @@ from unique_events;
 - I didn't have time to build out models or updated queries to re-address the questions from the prior week.
 - A bespoke test has been included and then a handfule of basic `not_null` and `unique` tests on various columns; I tend to prefer to try and make my queries more "defensive" basically assuming that bad data may reach the queries but (not best practice but a general preference coming from a development background).
 - For the actual models, I think I opted to put too much weight into the `core` resources - I was sort of lost with the open-ended nature of the questions and basically just tried providing _enriched_ resources in the `core` that could be referenced from the other model packages with pretty basic `SELECT` statements. Again, not really following the exact requirements of the week's submission.
+
+# Week 3
+
+- I opted to skip the product-specific conversion rate for this week because I won't be able to dig into the specific SQL statements or model reworks that are needed to make that happen.
+- The external testing package `dbt_expectations` has been included on a staging model as an example.
+- The DAG has likely gotten more complex but because I won't really be able to go back and rework models from prior weeks, it can't really be helped at this point.
